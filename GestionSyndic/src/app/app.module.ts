@@ -16,6 +16,7 @@ import { AddSyndicComponent } from './composant/Syndic/add-syndic/add-syndic.com
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AppRoutingModule
   ],
   providers: [],
