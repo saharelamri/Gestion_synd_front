@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Lot } from 'src/app/models/lot';
+import { Observable } from 'rxjs';
+import { LotService } from 'src/app/service/lot.service';
 
 @Component({
   selector: 'app-show-lot',
@@ -6,10 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-lot.component.css']
 })
 export class ShowLotComponent implements OnInit {
+public lot : Lot[];
+public lots: Lot[];
 
-  constructor() { }
+
+  constructor(private Lotservice: LotService) { }
 
   ngOnInit() {
+this.reloadData();
   }
-
+reloadData(){
+  this.Lotservice.getLotList().subscribe(data=>{
+    this.lot=data;
+    this.lots=data;
+    console.log(data);
+   } , err=>{console.log(err)
+  })
+}
+deleteLot(id:number){
+  this.Lotservice.deleteLot(id).subscribe(data=>
+    {
+      console.log(data);
+      this.reloadData();
+    },
+    error=>console.log(error)
+    );
+}
 }

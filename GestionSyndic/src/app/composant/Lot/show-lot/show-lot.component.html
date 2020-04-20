@@ -1,1 +1,41 @@
-<p>show-lot works!</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <h1>Lots</h1>
+  </div>
+  <div class="panel-body">
+      <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th>CodeLot</th>
+                  <th>Batiment</th>
+                  <th>Type</th>
+                  <th>Surface</th>
+                  <th>Porte</th>
+                  <th>Nbr_pièces</th>
+                  <th>Commentaires</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let lot of Lots | async">
+                  <td>{{lot.CodeLot}}</td>
+                  <td>{{lot.Batiment}}</td>
+                  <td>{{lot.Type}}</td>
+                  <td>{{lot.Surface}}</td>
+                  <td>{{lot.Porte}}</td>
+                  <td>{{lot.Nbr_pièces}}</td>
+                  <td>{{lot.Commentaires}}</td>
+                  
+                  <td><button (click)="deleteLot(lot.CodeLot)">Delete</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+<!--<input type="select">
+                    <option valeur="appart">Apparetement</option>
+                    <option valeur="garage">Garage</option>
+                    <option valeur="parking">Parking</option>
+                    <option valeur="ascenseur">Ascenseur</option>
+                  </input>-->
+                  
