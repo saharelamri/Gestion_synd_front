@@ -13,20 +13,23 @@
                   <th>Porte</th>
                   <th>Nbr_pièces</th>
                   <th>Commentaires</th>
+                  <th>Manage</th>
                   
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let lot of Lots | async">
-                  <td>{{lot.CodeLot}}</td>
-                  <td>{{lot.Batiment}}</td>
-                  <td>{{lot.Type}}</td>
-                  <td>{{lot.Surface}}</td>
-                  <td>{{lot.Porte}}</td>
-                  <td>{{lot.Nbre_pieces}}</td>
-                  <td>{{lot.Commentaires}}</td>
+              <tr *ngFor="let lot of lots ">
+                  <td>{{lot.codeLot}}</td>
+                  <td>{{lot.batiment}}</td>
+                  <td>{{lot.type}}</td>
+                  <td>{{lot.surface}}</td>
+                  <td>{{lot.porte}}</td>
+                  <td>{{lot.nbre_pieces}}</td>
+                  <td>{{lot.commentaires}}</td>
                   
-                  <td><button (click)="deleteLot(lot.CodeLot)">Delete</button></td>
+                  <td><button class="btn btn-danger" (click)="deleteLot(lot.CodeLot)">Delete</button>
+                    <button class="btn btn-info"  style="margin-left: 30px" (click)="updateLot(lot.CodeLot)">Update</button></td>
+                  
               </tr>
           </tbody>
       </table>

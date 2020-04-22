@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowLotComponent } from './Composant/Lot/show-lot/show-lot.component';
@@ -15,6 +15,7 @@ import { AddSyndicComponent } from './composant/Syndic/add-syndic/add-syndic.com
     AddSyndicComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     AppRoutingModule
