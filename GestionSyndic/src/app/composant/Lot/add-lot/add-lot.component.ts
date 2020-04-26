@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 import { Lot } from 'src/app/models/lot';
 import { LotService } from 'src/app/service/lot.service';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-lot',
@@ -8,25 +11,40 @@ import { LotService } from 'src/app/service/lot.service';
   styleUrls: ['./add-lot.component.css']
 })
 export class AddLotComponent implements OnInit {
-lot : Lot = new Lot();
-submitted = false;
-  constructor(private LotService : LotService) { }
+
+  lot: any;
+  
+  constructor(private lotService: LotService,
+    private router: Router) { }
 
   ngOnInit() {
   }
-  addLot(): void {
-    this.submitted = false;
-    this.lot = new Lot();
-  }
 
-  save() {
-    this.LotService.createLot(this.lot)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.lot = new Lot();
+  
+
+  Onsave(data:Lot){
+    
+    this.lotService.createLot(data).subscribe(res=>{
+          this.lot=res;
+          this.gotoList();
+  
+  }) }
+  gotoList() {
+    this.router.navigate(['/showlot']);
   }
+}
+  //data => console.log(data), error => console.log(error));
+    //this.lot = new Lot();
+    //this.gotoList();
+  /*}
 
   onSubmit() {
     this.submitted = true;
-    this.save();
+    this.save();    
+  }
+
+  gotoList() {
+    this.router.navigate(['/showlot']);
   }
 }
+*/

@@ -1,36 +1,37 @@
 export class Lot {
-    CodeLot : number;
-    Type : String;
-	  Batiment : string ;
-	  Porte : number;
-    Surface : string;
-    Etage : number;
-	  Nbre_pieces : number ;
-	  Commentaires : string ;
+    codeLot : number;
+    type : String;
+	  batiment : string ;
+	  porte : number;
+    surface : string;
+    etage : number;
+	  nbre_pieces : number ;
+	  commentaires : string ;
       
-    /*constructor (CodeLot : number,
-      Type : String,
-      Batiment : string, 
-      Porte : number,
-      Surface : string,
-      Etage : number,
-      Nbre_pieces : number ,
-      Commentaires : string )
+   constructor (CodeLot: number,
+      Batiment: string,
+	  Porte : number,
+    Surface : string,
+    Etage : number,
+	  Nbre_pieces : number ,
+    Commentaires : string ,
+    Type : String )
     {
-        this.CodeLot = CodeLot;
-        this.Type=Type;
-        this.Batiment=Batiment;
-        this.Porte=Porte;
-        this.Surface=Surface;
-        this.Etage=Etage;
-        this.Nbre_pieces=Nbre_pieces;
-        this.Commentaires=Commentaires;
+        this.codeLot = CodeLot;
+        this.type=Type;
+        this.batiment=Batiment;
+        this.porte=Porte;
+        this.surface=Surface;
+        this.etage=Etage;
+        this.nbre_pieces=Nbre_pieces;
+        this.commentaires=Commentaires;
         
 
-    }*/
-    constructor (){
-
     }
+    /*constructor(){
+        
+    }*/
+   
     
 	
 }

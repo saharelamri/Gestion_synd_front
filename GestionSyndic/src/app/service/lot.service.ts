@@ -19,8 +19,8 @@ export class LotService {
     return this.httpClient.post(this.baseUrl+"/add_lot", Lot);
   }
 
-  updateLot(id: number, value: any) {
-    return this.httpClient.put(this.baseUrl+"/update_lot/"+id, value);
+  updateLot(Lot:Object ) {
+    return this.httpClient.put(this.baseUrl+"/update_lot",Object);
   }
 
   deleteLot(id: number) {

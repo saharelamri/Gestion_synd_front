@@ -1,7 +1,6 @@
-<h3>Add Lot</h3>
+<h3>Update Lot</h3>
 <div [hidden]="submitted" style="width: 400px;">
-    <div class="col-md-9 colsm-6 col-xs-12">
-    <form #f="ngForm" (ngSubmit)="Onsave(f.value)">
+    <form #f="ngForm" (ngSubmit)="onupdateLot(f.value)">
 
         <div class="form-group">
             <label for="name">Batiment</label>
@@ -37,5 +36,13 @@
         <button  class="btn btn-success">Submit</button>
     
 </form>
-   </div> 
 </div>
+
+  <!--<div>
+        <p>batiment{{ batiment.value }}</p>
+    
+    <p>Form value: {{ f.value | json }}</p>
+    <p>Form valid: {{ f.valid }}</p>
+    
+    </div>-->  
+
