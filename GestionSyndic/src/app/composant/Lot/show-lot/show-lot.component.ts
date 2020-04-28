@@ -45,13 +45,14 @@ updateLot(id:number){
 let conf=confirm("Etes vous sur de supprimer ce lot ?? ");
       if(conf)
       this.Lotservice.deleteLot(id).subscribe(data=>{
-        this.Lotservice.getLotList();
-        this.gotoList();
+        this.reloadData();
+        //this.gotoList();
+        window.location.reload();
       },err=>{console.log(err);})
     }
-    gotoList(){
+   /* gotoList(){
       this.router.navigate(['/showlot']);
-    }
+    }*/
     onUpdateLot(id:number)
     {
       this.router.navigateByUrl("/update/"+id);

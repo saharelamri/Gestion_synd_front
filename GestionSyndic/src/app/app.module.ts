@@ -8,7 +8,7 @@ import { ShowLotComponent } from './Composant/Lot/show-lot/show-lot.component';
 import { AddLotComponent } from './Composant/Lot/add-lot/add-lot.component';
 import { AddSyndicComponent } from './composant/Syndic/add-syndic/add-syndic.component';
 import { UpdateLotComponent } from './composant/Lot/update-lot/update-lot.component';
-
+import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { UpdateLotComponent } from './composant/Lot/update-lot/update-lot.compon
     BrowserModule,
     AppRoutingModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

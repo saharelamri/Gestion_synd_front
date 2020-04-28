@@ -31,7 +31,7 @@ this.lotService.getLot(this.route.snapshot.params.id)
     
 let lot:Lot = new Lot(this.route.snapshot.params.id,value.batiment,value.surface,value.etage,value.porte,value.nbre_pieces,value.commentaires,value.type);
  
-   this.lotService.updateLot(lot).subscribe(data=>
+   this.lotService.updateLot(this.route.snapshot.params.id,lot).subscribe(data=>
       this.router.navigateByUrl("/showlot"))}
   
 

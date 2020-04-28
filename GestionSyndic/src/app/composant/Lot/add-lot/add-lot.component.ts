@@ -25,8 +25,9 @@ export class AddLotComponent implements OnInit {
   Onsave(data:Lot){
     
     this.lotService.createLot(data).subscribe(res=>{
-          this.lot=res;
-          this.gotoList();
+      this.gotoList(); 
+      this.lot=res;
+          
   
   }) }
   gotoList() {

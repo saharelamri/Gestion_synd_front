@@ -19,10 +19,10 @@ export class LotService {
     return this.httpClient.post(this.baseUrl+"/add_lot", Lot);
   }
 
-  updateLot(Lot:Object ) {
-    return this.httpClient.put(this.baseUrl+"/update_lot",Object);
+  updateLot(id:number,Lot:Object ) {
+    return this.httpClient.put(this.baseUrl+"/update_lot/"+id,Object);
   }
-
+  
   deleteLot(id: number) {
     return this.httpClient.delete(this.baseUrl+"/delete_lot/"+id, { responseType: 'text' });
   }

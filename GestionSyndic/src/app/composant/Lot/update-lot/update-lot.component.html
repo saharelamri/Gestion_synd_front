@@ -1,41 +1,45 @@
 <h3>Update Lot</h3>
 <div [hidden]="submitted" style="width: 400px;">
+    <div class="col-md-9 colsm-6 col-xs-12">
+        <div class="panel-body" *ngIf="lot1">
     <form #f="ngForm" (ngSubmit)="onupdateLot(f.value)">
 
         <div class="form-group">
             <label for="name">Batiment</label>
-            <input type="text" class="form-control" id="bat" ngModel required #batiment="ngModel" name="batiment">
+            <input type="text" class="form-control" id="bat" ngModel [(ngModel)]="lot1.batiment" name="batiment">
         </div>
 
         <div class="form-group">
             <label for="name">Type</label>
-            <input type="text" class="form-control" id="typelot" ngModel required #type="ngModel" name="type">
+            <input type="text" class="form-control" id="typelot" ngModel [(ngModel)]="lot1.type" name="type">
         </div>
 
         <div class="form-group">
             <label for="name">Surface</label>
-            <input type="text" class="form-control" id="surfacelot" ngModel required #surface ="ngModel" name="surface">
+            <input type="text" class="form-control" id="surfacelot" ngModel [(ngModel)]="lot1.surface" name="surface">
         </div>
         <div class="form-group">
             <label for="name">Porte</label>
-            <input type="text" class="form-control" id="portelot" ngModel required #porte="ngModel" name="¨porte">
+            <input type="text" class="form-control" id="portelot" ngModel [(ngModel)]="lot1.porte" name="¨porte">
         </div>
         <div class="form-group">
             <label for="name">Etage</label>
-            <input type="text" class="form-control" id="etagelot" ngModel required #etage="ngModel" name="¨etage">
+            <input type="text" class="form-control" id="etagelot" ngModel [(ngModel)]="lot1.etage" name="¨etage">
         </div>
         <div class="form-group">
             <label for="name">Nbre_pieces</label>
-            <input type="text" class="form-control" id="nbpieceslot" ngModel required #nbre_pieces="ngModel" name="nbre_pieces">
+            <input type="text" class="form-control" id="nbpieceslot" ngModel [(ngModel)]="lot1.nbre_pieces" name="nbre_pieces">
         </div>
         <div class="form-group">
             <label for="name">Commentaires</label>
-            <textarea class="form-control" id="commentaireslot" ngModel required #commentaires="ngModel" name="commentaires"></textarea>
+            <textarea class="form-control" id="commentaireslot" ngModel [(ngModel)]="lot1.commentaires" name="commentaires"></textarea>
         </div>
 
         <button  class="btn btn-success">Submit</button>
     
 </form>
+</div>
+</div>
 </div>
 
   <!--<div>
