@@ -7,7 +7,7 @@ import { Lot } from '../models/lot';
   providedIn: 'root'
 })
 export class LotService {
-  private baseUrl= 'http://localhost:8080/Lot';
+  private baseUrl= 'http://localhost:8081/Lot';
 
   constructor(private httpClient: HttpClient) { }
 
