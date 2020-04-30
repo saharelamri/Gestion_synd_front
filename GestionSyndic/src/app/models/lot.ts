@@ -1,9 +1,9 @@
 export class Lot {
     codeLot : number;
-    type : String;
-	  batiment : string ;
-	  porte : number;
+    batiment : string ;
+    porte : number;
     surface : string;
+    type : String;
     etage : number;
 	  nbre_pieces : number ;
 	  commentaires : string ;

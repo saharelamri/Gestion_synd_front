@@ -23,20 +23,29 @@ ongetLot(){
   
 this.lotService.getLot(this.route.snapshot.params.id)
   .subscribe(data=>
-    this.lot1=data
+   this.lot1=data
   )}
 
 
  onupdateLot(value:any){
     
-let lot:Lot = new Lot(this.route.snapshot.params.id,value.batiment,value.surface,value.etage,value.porte,value.nbre_pieces,value.commentaires,value.type);
+let lot:Lot ;
+lot = new Lot(this.route.snapshot.params.id,value.batiment,value.surface,value.etage,value.porte,value.nbre_pieces,value.commentaires,value.type);
  
-   this.lotService.updateLot(this.route.snapshot.params.id,lot).subscribe(data=>
-      this.router.navigateByUrl("/showlot"))}
+   this.lotService.updateLot(this.route.snapshot.params.id,lot).subscribe(data=>{
+    console.log(data);
+   this.router.navigateByUrl("/showlot")
+    //console.log(this.lot1)
+  })
+    }
+   }
+          
+
+      
   
 
 
-   }
+   
 
 
 
