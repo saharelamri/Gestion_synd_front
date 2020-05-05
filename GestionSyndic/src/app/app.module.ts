@@ -11,6 +11,9 @@ import { UpdateLotComponent } from './composant/Lot/update-lot/update-lot.compon
 import { ShowFournisseurComponent } from './composant/Fournisseur/show-fournisseur/show-fournisseur.component';
 import { AddFournisseurComponent } from './composant/Fournisseur/add-fournisseur/add-fournisseur.component';
 import { UpdateFournisseurComponent } from './composant/Fournisseur/update-fournisseur/update-fournisseur.component';
+import { ShowCarnetComponent } from './composant/CarnetEntretien/show-carnet/show-carnet.component';
+import { AddCarnetComponent } from './composant/CarnetEntretien/add-carnet/add-carnet.component';
+import { UpdateCarnetComponent } from './composant/CarnetEntretien/update-carnet/update-carnet.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { UpdateFournisseurComponent } from './composant/Fournisseur/update-fourn
     UpdateLotComponent,
     ShowFournisseurComponent,
     AddFournisseurComponent,
-    UpdateFournisseurComponent
+    UpdateFournisseurComponent,
+    ShowCarnetComponent,
+    AddCarnetComponent,
+    UpdateCarnetComponent
    
   ],
   imports: [

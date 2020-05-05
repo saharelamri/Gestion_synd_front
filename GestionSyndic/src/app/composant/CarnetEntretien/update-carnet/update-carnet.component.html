@@ -1,0 +1,49 @@
+<p>edit-carnet works!</p>
+<p>modifier -fournisseur !</p>
+<div class="container">
+    <div class="col-md-9 colsm-6 col-xs-12">
+    <div class="panel panel-default">
+    <div class="panel-heading"><br><h3>Modif carnet</h3><br>  </div>
+    <div class="panel-body" *ngIf="carnet,listeFournisseurId">
+    <form #f="ngForm" (ngSubmit)="onupdateCarnet(f.value)">
+    <div class="form-group">
+    <label class="control-label">Nature Travaux</label>
+    <input class="form-control" type="text" required  name="nomF" ngModel [(ngModel)]="carnet.natureTravaux">
+    </div>
+    <div class="form-group">
+        <label class="control-label">Cout</label>
+        <input class="form-control" type="number" required name="contactF" ngModel [(ngModel)]="carnet.cout">
+        </div>
+    <div class="form-group">
+      <label class="control-label">Budget prevsionnel</label>
+      <input class="form-control" type="number" required name="adrF" ngModel [(ngModel)]="carnet.budgetprevsionnel">
+      </div>
+
+        <div class="form-group">
+            <label class="control-label">date intervention</label>
+            <input class="form-control" required type="date" name="siteWebF" ngModel [(ngModel)]="carnet.dateintervention">
+            </div>
+
+        <div class="form-group">
+            <label class="control-label">Nom fournisseur</label>
+
+            <select type="select"ng-model="fournisseur">
+            <label>Quelle est votre fournisseur ?</label>
+            <option value="{{carnet.fournisseur}}">{{carnet.fournisseur.nomF}}</option>
+     <option ng-repeat=" fournisseur in listeFournisseurId" value="{{fournisseur}}">
+         {{fournisseur}}</option>
+        </select>
+
+        </div>
+        <div class="form-group">       
+        <button class="btn btn-success" type="submit">Modifier</button><br><br>
+        <button class="btn btn-success" type="reset">Annuler</button><br><br>
+        </div>
+     </form>
+    </div>
+    
+
+ 
+    
+    
+

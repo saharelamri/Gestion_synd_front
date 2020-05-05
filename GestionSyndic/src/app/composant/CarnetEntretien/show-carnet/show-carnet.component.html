@@ -1,0 +1,43 @@
+<p>lister-carnet</p>
+<div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <br><h3>Liste des carnets</h3><br></div>
+  
+    <div class="panel-body">
+        
+      <form #f="ngForm" (ngSubmit)="Onchercher(f.value)">
+            <div class="form-group">
+            <label>Mot Clé  </label>
+            <input type="text"  name="mot_cle" ngModel>
+            <button type="submit" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span> Chercher</button>
+            </div>
+        </form>
+        <br>
+
+     <table *ngIf="carnetList" class="table table-striped">
+  <tr>
+  
+   <th>Code carnet d'entretien</th><th>Date d'intervention</th><th>Cout</th><th>Nature Travaux</th><th>Budget prevsionnel</th><th>Fourniseur</th><th></th>
+  
+  <tr *ngFor="let carnet of carnetList">
+  
+    <td>{{carnet.codeCE}}</td>
+    <td>{{carnet.dateintervention}}</td>
+    <td>{{carnet.cout}}</td>
+    <td>{{carnet.natureTravaux}}</td>
+    <td>{{carnet.budgetprevsionnel}}</td>
+    <td>{{carnet.fournisseur.nomF}}</td>
+
+    <td><a class="btn btn-danger" (click)=" onDeleteCarnet(carnet.codeCE)">Supprimer </a></td>
+    <td><a class="btn btn-success"(click)="onEditCarnet(carnet.codeCE)" >Modifier </a></td>
+  </tr>
+  
+    
+  </table>
+  
+    </div>
+  
+  </div>
+  
+  </div>
