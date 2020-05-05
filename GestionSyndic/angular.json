@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GestionSyndic"
+    }
+  },
+  "defaultProject": "GestionSyndic",
+  "cli": {
+    "analytics": "d85fa4f0-558e-4b38-9776-dbfe32235254"
+  }
 }
