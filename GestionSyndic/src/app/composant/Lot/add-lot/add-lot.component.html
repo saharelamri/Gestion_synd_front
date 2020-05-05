@@ -10,7 +10,13 @@
 
         <div class="form-group">
             <label for="name">Type</label>
-            <input type="text" class="form-control" id="typelot" ngModel required #type="ngModel" name="type">
+            <!--<input type="text" >-->
+            <input type="select"class="form-control" id="typelot" ngModel required #type="ngModel" name="type">
+                    <option valeur="appart">Apparetement</option>
+                    <option valeur="garage">Garage</option>
+                    <option valeur="parking">Parking</option>
+                    <option valeur="ascenseur">Ascenseur</option>
+                 
         </div>
 
         <div class="form-group">
