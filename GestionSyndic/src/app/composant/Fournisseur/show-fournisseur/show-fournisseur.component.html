@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <br><h3>Liste des fournisseurs</h3><br></div>
+  
+    <div class="panel-body">
+        
+      <form #f="ngForm" (ngSubmit)="Onchercher(f.value)">
+            <div class="form-group">
+            <label>Mot Clé  </label>
+            <input type="text"  name="mot_cle" ngModel>
+            <button type="submit" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span> Chercher</button>
+            </div>
+        </form>
+        <br>
+
+     <table *ngIf="fournisseurList" class="table table-striped">
+  <tr>
+  
+   <th>Code fournisseur</th><th>Nom</th><th>Contact</th><th>Adresse</th><th>Email</th><th>Site Web</th><th></th><th></th>
+  
+  <tr *ngFor="let fournisseur of fournisseurList">
+  
+    <td>{{fournisseur.idF}}</td>
+    <td>{{fournisseur.nomF}}</td>
+    <td>{{fournisseur.contactF}}</td>
+    <td>{{fournisseur.adrF}}</td>
+    <td>{{fournisseur.emailF}}</td>
+    <td>{{fournisseur.siteWebF}}</td>
+
+    <td><a class="btn btn-danger" (click)=" onDeleteFournisseur(fournisseur.idF)">Supprimer </a></td>
+    <td><a class="btn btn-success"(click)="onEditFournisseur(fournisseur.idF)" >Modifier </a></td>
+  </tr>
+  
+    
+  </table>
+  
+    </div>
+  
+  </div>
+  
+  </div>
