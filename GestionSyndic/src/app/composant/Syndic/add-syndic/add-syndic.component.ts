@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Syndic } from 'src/app/models/syndic';
+import { SyndicService } from 'src/app/service/synidc.service';
 
 @Component({
   selector: 'app-add-syndic',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddSyndicComponent implements OnInit {
 
-  constructor() { }
+  public currentSyndic:any;
+  mode:number=1;
+  constructor(private syndicService : SyndicService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+  }
+
+  OnsaveSyndic(data:Syndic){
+    this.syndicService.createSyndic(data).subscribe(res=>{
+      this.currentSyndic=res
+      this.mode=2;
+      })
+  }
+  OnewSyndic(){
+    this.mode=1;
   }
 
 }

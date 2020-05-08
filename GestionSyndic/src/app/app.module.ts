@@ -14,6 +14,8 @@ import { UpdateFournisseurComponent } from './composant/Fournisseur/update-fourn
 import { ShowCarnetComponent } from './composant/CarnetEntretien/show-carnet/show-carnet.component';
 import { AddCarnetComponent } from './composant/CarnetEntretien/add-carnet/add-carnet.component';
 import { UpdateCarnetComponent } from './composant/CarnetEntretien/update-carnet/update-carnet.component';
+import { ShowSyndicComponent } from './composant/syndic/show-syndic/show-syndic.component';
+import { UpdateSyndicComponent } from './composant/syndic/update-syndic/update-syndic.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { UpdateCarnetComponent } from './composant/CarnetEntretien/update-carnet
     UpdateFournisseurComponent,
     ShowCarnetComponent,
     AddCarnetComponent,
-    UpdateCarnetComponent
+    UpdateCarnetComponent,
+    ShowSyndicComponent,
+    UpdateSyndicComponent
    
   ],
   imports: [
