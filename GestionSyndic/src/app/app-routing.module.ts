@@ -9,6 +9,9 @@ import { UpdateFournisseurComponent } from './composant/Fournisseur/update-fourn
 import { UpdateCarnetComponent } from './composant/CarnetEntretien/update-carnet/update-carnet.component';
 import { AddCarnetComponent } from './composant/CarnetEntretien/add-carnet/add-carnet.component';
 import { ShowCarnetComponent } from './composant/CarnetEntretien/show-carnet/show-carnet.component';
+import { ShowSyndicComponent } from './composant/syndic/show-syndic/show-syndic.component';
+import { AddSyndicComponent } from './composant/Syndic/add-syndic/add-syndic.component';
+import { UpdateSyndicComponent } from './composant/syndic/update-syndic/update-syndic.component';
 
 
 const routes: Routes = [
@@ -21,9 +24,13 @@ const routes: Routes = [
 { path: "fournisseurs/ajout", component: AddFournisseurComponent },
 { path: 'fournisseurs/update/:id', component: UpdateFournisseurComponent },
 { path: "carnet" },
-{ path: "carnets/lister", component: ShowCarnetComponent },
-{ path: "carnets/ajout", component: AddCarnetComponent },
-{ path: 'carnets/update/:id', component: UpdateCarnetComponent }
+{ path: "carnets/lister", component: ShowSyndicComponent },
+{ path: "carnets/ajout", component: AddSyndicComponent },
+{ path: 'carnets/update/:id', component: UpdateSyndicComponent },
+{ path: "syndic" },
+{ path: "syndics/lister", component: ShowCarnetComponent },
+{ path: "syndics/ajout", component: AddCarnetComponent },
+{ path: 'syndics/update/:id', component: UpdateCarnetComponent }
 ];
 
 @NgModule({
